@@ -5,10 +5,10 @@ let novoTexto = [];
 
 btn_enviarTexto.addEventListener('click', () => {
     novoTexto = [];
-    separaPalvras(textoEnviado.value);
+    separaPalavras(textoEnviado.value);
 });
 
-function separaPalvras(palavras) {
+function separaPalavras(palavras) {
     const palavrasSeparadas = palavras.split(" ");
     
     for (el of palavrasSeparadas) {
