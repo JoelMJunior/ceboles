@@ -23,8 +23,15 @@ function trocaLetras(palavra) {
     
     if (novaPalavra.includes('R') || novaPalavra.includes('r')) {
         for(letra of novaPalavra) {
-            if(letra === 'R' && novaPalavra.indexOf('R') !== (novaPalavra.length - 1) ||
-            letra === 'r' && novaPalavra.indexOf('r') !== (novaPalavra.length - 1)) {
+            if (novaPalavra.includes(',') || novaPalavra.includes('.') || novaPalavra.includes(';')  || 
+            novaPalavra.includes('?') || novaPalavra.includes('!')) {
+                if((letra === 'R' && novaPalavra.indexOf('R') !== (novaPalavra.length - 2)) ||
+                (letra === 'r' && novaPalavra.indexOf('r') !== (novaPalavra.length - 2))) {
+                    plvr = novaPalavra.replace('R', 'L').replace('r', 'l');
+                    novaPalavra = plvr;
+                }
+            } else if((letra === 'R' && novaPalavra.indexOf('R') !== (novaPalavra.length - 1)) ||
+            (letra === 'r' && novaPalavra.indexOf('r') !== (novaPalavra.length - 1))) {
                 plvr = novaPalavra.replace('R', 'L').replace('r', 'l');
                 novaPalavra = plvr;
             }
