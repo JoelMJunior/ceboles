@@ -19,7 +19,7 @@ function separaPalvras(palavras) {
 
 function trocaLetras(palavra) {
     let plvr;
-    let novaPalavra = palavra.replaceAll('rr', 'l');
+    let novaPalavra = palavra.replace('RR', 'L').replaceAll('rr', 'l');
     
     if (novaPalavra.includes('R') || novaPalavra.includes('r')) {
         for(letra of novaPalavra) {
