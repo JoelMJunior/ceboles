@@ -6,20 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Traduz o seu texto em português para o cebolês, a lingua do Cebolinha">
     <meta name="keywords" content="tradutor, traduzir, cebolinha, mônica, turma da mônica, português">
+    <link rel="icon" type="image/x-ico" href="">    
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
     <title>Tradutor de Cebolês</title>
 </head>
 <body>
     <section>
-        <h1>Traduz o seu texto para o Cebolês, a linguagem do Cebolinha.</h1>
-        <div>
-            <label for="text-original">Texto:</label>
-            <textarea id="text-original" name="mensage-box" rows="10" cols="60" placeholder="Escreva seu texto"></textarea>
-            <button id="btn-send-text" type="submit">Traduzir</button>
+        <nav>
+            <ul>
+                <li><a href="#">Cebolinha</a></li>
+                <li><a href="#">Cebolês</a></li>
+                <li><a href="#">Exemplos</a></li>
+            </ul>
+        </nav>
+        <h1>Traduza o seu texto para o Cebolês, a língua do Cebolinha.</h1>
+        <div id="container-text">
+            <div id="nav-options">
+                <div>
+                    <p><a href="#">Português</a></p>
+                </div>
+                <div>
+                    <img src="" alt="Olhos do Cebolinha">
+                </div>
+                <div>
+                    <p><a href="#">Padrão</a></p>
+                    <p><a href="#">WhatsApp</a></p>
+                    <p><a href="#">HTML</a></p>
+                </div>
+            </div>
+            <div>
+                <textarea id="text-original" name="mensage-box" rows="10" cols="60"></textarea>
+            </div>
+            <div>
+                <textarea id="text-translated" name="mensage-box" rows="10" cols="60"></textarea>
+            </div>
         </div>
-        <div>
-            <label for="text-translated">Texto:</label>
-            <textarea id="text-translated" name="mensage-box" rows="10" cols="60"></textarea>
-        </div>
+        <button id="btn-send-text" type="submit">Traduzir</button>
+        <figure>
+            <img src="" alt="Imagem do Cebolinha">
+        </figure>
     </section>
 
     <script src="./translators/ceboles-translator.js"></script>
