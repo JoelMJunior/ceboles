@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -7,4 +9,55 @@
 
 html {
     font-size: 16px;
+    font-family: Happy Monkey, Helvetica, sans-serif;
+    color: #2E2E2E;
+}
+
+a {
+    color: #2E2E2E;
+}
+
+#presentation {
+    height: 100vh;
+    background-color: #FDEBE0;
+}
+
+#presentation nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#presentation nav ul {
+    display: flex;
+    margin-right: 30px;
+}
+
+#presentation nav ul li {
+    list-style: none;
+    padding: 1em 1em;
+}
+
+#presentation h1 {
+    font-size: 2em;
+    font-weight: normal;
+    margin: 35px 0 0 50px;
+}
+
+#presentation #container-text {
+    display: flex;
+    flex-direction: column;
+}
+
+#presentation #nav-options {
+    display: flex;
+    align-self: stretch;
+}
+
+#presentation .languages {
+    display: flex;
+    width: 100%;
+}
+
+#presentation #box-texts {
+    display: flex;
 }

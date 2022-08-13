@@ -11,34 +11,38 @@
     <title>Tradutor de Cebolês</title>
 </head>
 <body>
-    <section>
-        <nav>
-            <ul>
-                <li><a href="#">Cebolinha</a></li>
-                <li><a href="#">Cebolês</a></li>
-                <li><a href="#">Exemplos</a></li>
-            </ul>
-        </nav>
-        <h1>Traduza o seu texto para o Cebolês, a língua do Cebolinha.</h1>
+    <section id="presentation">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Cebolinha</a></li>
+                    <li><a href="#">Cebolês</a></li>
+                    <li><a href="#">Exemplos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Traduza o seu texto para o<br>Cebolês, a língua do Cebolinha.</h1>
         <div id="container-text">
             <div id="nav-options">
-                <div>
+                <div class="languages">
                     <p><a href="#">Português</a></p>
                 </div>
                 <div>
                     <img src="" alt="Olhos do Cebolinha">
                 </div>
-                <div>
+                <div class="languages">
                     <p><a href="#">Padrão</a></p>
                     <p><a href="#">WhatsApp</a></p>
                     <p><a href="#">HTML</a></p>
                 </div>
             </div>
-            <div>
-                <textarea id="text-original" name="mensage-box" rows="10" cols="60"></textarea>
-            </div>
-            <div>
-                <textarea id="text-translated" name="mensage-box" rows="10" cols="60"></textarea>
+            <div id="box-texts">
+                <div>
+                    <textarea id="text-original" name="mensage-box"></textarea>
+                </div>
+                <div>
+                    <textarea id="text-translated" name="mensage-box"></textarea>
+                </div>
             </div>
         </div>
         <button id="btn-send-text" type="submit">Traduzir</button>
