@@ -34,23 +34,48 @@ a {
 
 #presentation nav ul li {
     list-style: none;
-    padding: 1em 1em;
+    padding: 15px 15px;
+}
+
+#presentation #h1-text {
+    width: 90vw;
+    margin: 30px auto 0 auto;
 }
 
 #presentation h1 {
     font-size: 2em;
     font-weight: normal;
-    margin: 35px 0 0 50px;
 }
 
 #presentation #container-text {
     display: flex;
     flex-direction: column;
+    margin-top: 35px;
 }
 
 #presentation #nav-options {
     display: flex;
+    align-items: center;
     width: 90vw;
+    height: 50px;
+    margin: auto;
+    background-color: #FCFCFC;
+    border-bottom: 1px solid #2e2e2e47;
+    border-radius: 7.5px 7.5px 0 0;
+}
+
+#presentation #nav-options p {
+    font-size: 1.15em;
+    padding: 0 25px;
+}
+
+#presentation #eyes-cebolinha {
+    display: flex;
+    align-items: center;
+}
+
+#presentation #eyes-cebolinha img {
+    width: 50px;
     margin: auto;
 }
 
@@ -63,27 +88,58 @@ a {
     margin: auto;
     display: flex;
     width: 90vw;
+    height: 150px;
 }
 
 #presentation #box-texts>div {
     width: 100%;
 }
 
+#presentation #box-texts>div:first-child {
+    border-right: 1px solid #2e2e2e47;
+}
+
 #presentation input[type=text] {
     width: 100%;
-    border: 1px solid #2E2E2E;
+    height: 100%;
+    border: 0;
     border-radius: 0;
-    margin-left: -1px;
+    background-color: #FCFCFC;
+}
+
+#presentation #text-original {
+    border-radius: 0 0 0 7.5px;
+}
+
+#presentation #text-translated {
+    border-radius: 0 0 7.5px 0;
 }
 
 #presentation #btn-translate {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+}
+
+#presentation #btn-translate button {
+    width: 130px;
+    height: 30px;
+    color: #FCFCFC;
+    background-color: #50ba91;
+    border: 0;
+    border-radius: 5px;
+    font-family: Happy Monkey, Helvetica, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 #presentation #image-cebolinha {
     display: flex;
     flex-direction: row-reverse;
     width: 90vw;
-    margin: auto;
+    margin: -30px auto;
+}
+
+#presentation #image-cebolinha img {
+    height: 150px;
 }
