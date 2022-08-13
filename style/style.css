@@ -25,11 +25,13 @@ a {
 #presentation nav {
     display: flex;
     justify-content: flex-end;
+    width: 90vw;
+    margin: auto;
 }
 
 #presentation nav ul {
     display: flex;
-    margin-right: 30px;
+    margin-right: 0;
 }
 
 #presentation nav ul li {
@@ -99,12 +101,15 @@ a {
     border-right: 1px solid #2e2e2e47;
 }
 
-#presentation input[type=text] {
+#presentation textarea {
     width: 100%;
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    padding: 15px 25px;
     border: 0;
-    border-radius: 0;
     background-color: #FCFCFC;
+    resize: none;
 }
 
 #presentation #text-original {
