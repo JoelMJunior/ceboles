@@ -50,7 +50,8 @@ a {
 
 #presentation #nav-options {
     display: flex;
-    align-self: stretch;
+    width: 90vw;
+    margin: auto;
 }
 
 #presentation .languages {
@@ -59,5 +60,30 @@ a {
 }
 
 #presentation #box-texts {
+    margin: auto;
     display: flex;
+    width: 90vw;
+}
+
+#presentation #box-texts>div {
+    width: 100%;
+}
+
+#presentation input[type=text] {
+    width: 100%;
+    border: 1px solid #2E2E2E;
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+#presentation #btn-translate {
+    display: flex;
+    justify-content: center;
+}
+
+#presentation #image-cebolinha {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90vw;
+    margin: auto;
 }
