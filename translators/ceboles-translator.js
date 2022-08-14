@@ -46,7 +46,6 @@ function trocaLetras(palavra) {
                 (novaPalavra.indexOf('R') === (novaPalavra.indexOf("'") - 1)))) {
                     /* NÃO TROCA A LETRA */
                 } else if(letra === 'R') {
-                    console.log('entrou R ponto');
                     plvr = novaPalavra.replace('R', 'L');
                     novaPalavra = plvr;
                 } else if(letra === 'r' && (
@@ -61,10 +60,7 @@ function trocaLetras(palavra) {
                 (novaPalavra.indexOf('r') === (novaPalavra.indexOf('"') - 1)) ||
                 (novaPalavra.indexOf('r') === (novaPalavra.indexOf("'") - 1)))) {
                     /* NÃO TROCA A LETRA */
-                    console.log('entrou r index igual');
                 } else if(letra === 'r') {
-                    console.log('entrou r ponto');
-                    console.log(novaPalavra.indexOf('r'));
                     plvr = novaPalavra.replace('r', 'l');
                     novaPalavra = plvr;
                 }
