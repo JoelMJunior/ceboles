@@ -23,21 +23,55 @@ function trocaLetras(palavra) {
     
     if (novaPalavra.includes('R') || novaPalavra.includes('r')) {
         for(letra of novaPalavra) {
-            if (novaPalavra.includes(',') || novaPalavra.includes('.') || novaPalavra.includes(';')  || 
-            novaPalavra.includes('?') || novaPalavra.includes('!')) {
-                if(letra === 'R' && novaPalavra.indexOf('R') !== (novaPalavra.length - 2)) {
+            if (novaPalavra.includes(',') || 
+            novaPalavra.includes('.') || 
+            novaPalavra.includes(';') || 
+            novaPalavra.includes('?') || 
+            novaPalavra.includes('!') ||
+            novaPalavra.includes(')') ||
+            novaPalavra.includes('}') ||
+            novaPalavra.includes(']') ||
+            novaPalavra.includes('"') ||
+            novaPalavra.includes("'")) {
+                if(letra === 'R' && (
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf(',') - 1)) || 
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf('.') - 1)) ||
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf(';') - 1)) ||
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf('?') - 1)) ||
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf('!') - 1)) ||
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf(')') - 1)) ||
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf('}') - 1)) ||
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf(']') - 1)) ||
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf('"') - 1)) ||
+                (novaPalavra.indexOf('R') === (novaPalavra.indexOf("'") - 1)))) {
+                    /* NÃO TROCA A LETRA */
+                } else if(letra === 'R') {
+                    console.log('entrou R ponto');
                     plvr = novaPalavra.replace('R', 'L');
                     novaPalavra = plvr;
-                } else if(letra === 'r' && novaPalavra.indexOf('r') !== (novaPalavra.length - 2)) {
+                } else if(letra === 'r' && (
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf(',') - 1)) || 
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf('.') - 1)) ||
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf(';') - 1)) ||
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf('?') - 1)) ||
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf('!') - 1)) ||
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf(')') - 1)) ||
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf('}') - 1)) ||
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf(']') - 1)) ||
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf('"') - 1)) ||
+                (novaPalavra.indexOf('r') === (novaPalavra.indexOf("'") - 1)))) {
+                    /* NÃO TROCA A LETRA */
+                    console.log('entrou r index igual');
+                } else if(letra === 'r') {
+                    console.log('entrou r ponto');
+                    console.log(novaPalavra.indexOf('r'));
                     plvr = novaPalavra.replace('r', 'l');
                     novaPalavra = plvr;
                 }
             } else if(letra === 'R' && novaPalavra.indexOf('R') !== (novaPalavra.length - 1)) {
-                console.log('Entrou R');
                 plvr = novaPalavra.replace('R', 'L');
                 novaPalavra = plvr;
             } else if(letra === 'r' && novaPalavra.indexOf('r') !== (novaPalavra.length - 1)) {
-                console.log('Entrou r');
                 plvr = novaPalavra.replace('r', 'l');
                 novaPalavra = plvr;
             }
