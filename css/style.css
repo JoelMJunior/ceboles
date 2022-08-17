@@ -17,6 +17,11 @@ a {
     color: #2E2E2E;
 }
 
+.active {
+    color: #b3381d;
+}
+
+/* PRESENTATION SECTION */
 #presentation {
     height: 100vh;
     background-color: #FDEBE0;
@@ -58,6 +63,7 @@ a {
 #presentation #nav-options {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 90vw;
     height: 50px;
     margin: auto;
@@ -83,7 +89,8 @@ a {
 
 #presentation .languages {
     display: flex;
-    width: 100%;
+    width: 50%;
+    overflow: hidden;
 }
 
 #presentation #box-texts {
@@ -106,10 +113,20 @@ a {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.25em;
+    color: black;
     padding: 15px 25px;
     border: 0;
     background-color: #FCFCFC;
     resize: none;
+}
+
+#presentation textarea:focus {
+    outline: none;
+}
+
+#presentation textarea:disabled {
+    color: black;
+    cursor: text;
 }
 
 #presentation #text-original {
