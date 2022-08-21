@@ -82,9 +82,29 @@ a {
     align-items: center;
 }
 
-#presentation #eyes-cebolinha img {
+#presentation #eyes-cebolinha {
+    display: flex;
+    align-items: center;
+}
+
+#presentation #eyes-cebolinha #eyes-div {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+#presentation #eyes-cebolinha #eyes-white {
     width: 50px;
     margin: auto;
+    display: block;
+}
+
+#presentation #eyes-cebolinha #eyes-black {
+    width: 32px;
+    margin: auto;
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    left: 5px;
 }
 
 #presentation .languages {
