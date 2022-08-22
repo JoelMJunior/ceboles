@@ -27,19 +27,19 @@ a {
     background-color: #FDEBE0;
 }
 
-#presentation nav {
+#presentation header nav {
     display: flex;
     justify-content: flex-end;
     width: 90vw;
     margin: auto;
 }
 
-#presentation nav ul {
+#presentation header nav ul {
     display: flex;
     margin-right: 0;
 }
 
-#presentation nav ul li {
+#presentation header nav ul li {
     list-style: none;
     padding: 15px 15px;
 }
@@ -98,8 +98,8 @@ a {
 }
 
 #presentation #eyes-cebolinha #eyes-black-div {
-    width: 44px;
-    height: 26px;
+    width: 88%;
+    height: 83%;
     margin: auto;
     display: block;
     position: absolute;
@@ -108,7 +108,7 @@ a {
 }
 
 #presentation #eyes-cebolinha #eyes-black {
-    width: 32px;
+    width: 73%;
     margin: auto;
     display: block;
     position: absolute;

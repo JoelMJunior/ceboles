@@ -1,0 +1,38 @@
+@media only screen and (max-width: 860px) {
+    #presentation #nav-options p {
+        font-size: 1em;
+        padding: 0 18px;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    #presentation #nav-options p {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    #presentation header nav ul li {
+        font-size: 0.85em;
+    }
+
+    #presentation h1 {
+        font-size: 1.4em;
+        font-weight: normal;
+    }
+
+    #presentation #eyes-cebolinha #eyes-white {
+        width: 37.5px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    #presentation h1 {
+        font-size: 1.1em;
+        font-weight: normal;
+    }
+    #presentation header nav {
+        justify-content: center;
+    }
+}
