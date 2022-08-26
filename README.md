@@ -2,7 +2,8 @@
 Tradutor para o Cebolês, a língua do personagem Cebolinha. Os conhecedores do personagem sabem que ele troca a letra 'r' pela letra 'l'. O que alguns não sabem é que existe uma exceção para essa regra: ele não troca as letras se o 'r' for a última letra da palavra. 
 
 Próximos passos:
-> Ajustar o código de responsividade, pensando na altura das telas. 
+> Ajustar o código de responsividade, pensando na altura das telas.
+> Verificar quando o widthWindow mudar no eyes-moviment.js.
 > Refatorar as regras do translator.
 > Adicionar botões para versões de texto, para Whatsapp e HTML, nas quais o R trocado seja negritado.
 > Adicionar o restante do conteúdo.
