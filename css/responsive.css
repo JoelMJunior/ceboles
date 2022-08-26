@@ -1,4 +1,8 @@
 @media only screen and (max-width: 860px) {
+    #presentation {
+        height: auto;
+    }
+    
     #presentation #nav-options p {
         font-size: 1em;
         padding: 0 18px;
@@ -6,6 +10,7 @@
 
     #presentation #image-cebolinha {
         justify-content: center;
+        padding-bottom: 30px;
         margin: 30px auto;
     }
 }
