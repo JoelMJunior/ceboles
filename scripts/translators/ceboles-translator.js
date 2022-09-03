@@ -80,16 +80,3 @@ function trocaLetras(palavra) {
 
     return novaPalavra;
 }
-
-let car = 'Cel,ta';
-teste();
-function teste() {
-    for(el of car) {
-        if(car.indexOf('l') === (car.indexOf(',') - 1)) {
-            console.log('entrou');
-        }
-        else {
-            console.log('não entrou');
-        }
-    }
-}
