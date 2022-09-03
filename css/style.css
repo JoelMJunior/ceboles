@@ -83,11 +83,6 @@ a {
     align-items: center;
 }
 
-#presentation #eyes-cebolinha {
-    display: flex;
-    align-items: center;
-}
-
 #presentation #eyes-cebolinha #eyes-div {
     position: relative;
 }
@@ -136,6 +131,7 @@ a {
 
 #presentation #box-texts>div:first-child {
     border-right: 1px solid #2e2e2e47;
+    position: relative;
 }
 
 #presentation textarea {
@@ -165,6 +161,22 @@ a {
 
 #presentation #text-translated {
     border-radius: 0 0 7.5px 0;
+}
+
+#presentation #btn-delete-text {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    right: 8px;
+    text-align: center;
+    background-color: #0000001d;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#presentation #btn-delete-text:hover {
+    background-color: #0000002d;
 }
 
 #presentation #btn-translate {
