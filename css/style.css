@@ -164,19 +164,23 @@ a {
 }
 
 #presentation #btn-delete-text {
+    display: none;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 20px;
     height: 20px;
     top: 5px;
-    right: 8px;
+    right: 6px;
     text-align: center;
-    background-color: #0000001d;
+    color: #525252;
+    background-color: #00000000;
     border-radius: 50%;
     cursor: pointer;
 }
 
 #presentation #btn-delete-text:hover {
-    background-color: #0000002d;
+    background-color: #0000001d;
 }
 
 #presentation #btn-translate {

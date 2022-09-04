@@ -1,10 +1,19 @@
 const verifyText = document.querySelector('#text-original');
+const btnDeleteText = document.querySelector('#btn-delete-text');
+const sendedText = document.querySelector("#text-original");
+const translatedText = document.querySelector("#text-translated");
 
+
+btnDeleteText.addEventListener('click', () => {
+    sendedText.value = "";
+    translatedText.value = "";
+    btnDeleteText.style.display = 'none';
+});
 
 verifyText.addEventListener('input', () => {
     if(verifyText.value === "") {
-        console.log('sem texto');
+        btnDeleteText.style.display = 'none';
     } else {
-        console.log('com texto');
+        btnDeleteText.style.display = 'flex';
     }
 });
