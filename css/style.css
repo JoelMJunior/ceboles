@@ -17,6 +17,10 @@ a {
     color: #2E2E2E;
 }
 
+a:hover {
+    color: #31D394;
+}
+
 .active {
     color: #b3381d;
 }
@@ -209,5 +213,5 @@ a {
 }
 
 #presentation #image-cebolinha img {
-    height: 150px;
+    height: 140px;
 }
