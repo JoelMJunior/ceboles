@@ -1,7 +1,7 @@
 const verifyText = document.querySelector('#text-original');
 const btnDeleteText = document.querySelector('#btn-delete-text');
-const sendedText = document.querySelector("#text-original");
-const translatedText = document.querySelector("#text-translated");
+const sendedText = document.querySelector('#text-original');
+const translatedText = document.querySelector('#text-translated');
 
 
 btnDeleteText.addEventListener('click', () => {
@@ -11,7 +11,7 @@ btnDeleteText.addEventListener('click', () => {
 });
 
 verifyText.addEventListener('input', () => {
-    if(verifyText.value === "") {
+    if (verifyText.value === "") {
         btnDeleteText.style.display = 'none';
     } else {
         btnDeleteText.style.display = 'flex';
