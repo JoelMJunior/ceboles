@@ -27,7 +27,7 @@ for(let i = 0; i < languages.length; i++) {
 
 function buttonLanguage(value) {
     for(let y = 0; y < languages.length; y++) {
-        languages[y].classList.remove('active');
+        languages[y].parentNode.classList.remove('active');
     }
-    languages[value].classList.add('active');
+    languages[value].parentNode.classList.add('active');
 }

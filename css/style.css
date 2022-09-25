@@ -14,7 +14,7 @@ html {
 }
 
 a {
-    color: #2E2E2E;
+    color: inherit;
 }
 
 a:hover {
@@ -23,6 +23,7 @@ a:hover {
 
 .active {
     color: #b3381d;
+    border-bottom: 1.5px solid #b3381d;
 }
 
 /* PRESENTATION SECTION */
@@ -118,8 +119,16 @@ a:hover {
 
 #presentation .languages {
     display: flex;
+    align-items: center;
     width: 50%;
+    height: 100%;
     overflow: hidden;
+}
+
+#presentation .languages p {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 #presentation #box-texts {
