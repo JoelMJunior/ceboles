@@ -1,4 +1,5 @@
 const btnDeleteText = document.querySelector('#btn-delete-text');
+const btnCopyText = document.querySelector('#btn-copy-text');
 const sendedText = document.querySelector('#text-original');
 const translatedText = document.querySelector('#text-translated');
 const languages = document.getElementsByClassName('language');
@@ -11,11 +12,17 @@ btnDeleteText.addEventListener('click', () => {
     btnDeleteText.style.display = 'none';
 });
 
+btnCopyText.addEventListener('click', () => {
+    navigator.clipboard.writeText(translatedText.value);
+});
+
 sendedText.addEventListener('input', () => {
     if (sendedText.value === "") {
         btnDeleteText.style.display = 'none';
+        btnCopyText.style.display = 'none';
     } else {
         btnDeleteText.style.display = 'flex';
+        btnCopyText.style.display = 'flex';
     }
 });
 
