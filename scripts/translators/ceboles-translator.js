@@ -22,7 +22,7 @@ function separaPalavras(palavras) {
         novoTextoWhatsApp.push(novaPalavraWhats);
         novoTextoHtml.push(novaPalavraHtml);
     }
-    textoTraduzido.value = novoTextoHtml.join(" ");
+    textoTraduzido.value = novoTexto.join(" ");
 }
 
 function trocaLetras(palavra) {

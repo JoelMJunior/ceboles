@@ -31,19 +31,15 @@ btnTranslate.addEventListener('click', () => {
 function hasScroll() {
     const elem1 = document.getElementById('text-original');
     if(elem1.clientHeight < elem1.scrollHeight) {
-        console.log('scroll maior');
         btnDeleteText.style.right = '18px';
     } else {
-        console.log('scroll menor');
         btnDeleteText.style.right = '6px';
     }
     
     const elem2 = document.getElementById('text-translated');
     if(elem2.clientHeight < elem2.scrollHeight) {
-        console.log('scroll maior');
         btnCopyText.style.right = '18px';
     } else {
-        console.log('scroll menor');
         btnCopyText.style.right = '6px';
     }
 }
