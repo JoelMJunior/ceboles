@@ -7,7 +7,6 @@ Próximos passos:
 > Centralizar as variáveis em apenas um arquivo javascript, de preferência no text-controller.js, usando export e import.
 > Fazer o tradutor considerar a quebra de linha na hora de dividir as palavras.
 > Adicionar o restante do conteúdo.
-> Centralizar o X do butão de apagar todo o texto digitado.
 > Considerar colocar o div do olhos no formato oval, para melhorar o posionamento dos olhos pretos.
 > No eyes-moviment.js, pensar numa forma mais elegante de resolver o onmousemove quando não tiver mais o movimento dos olhos.
 

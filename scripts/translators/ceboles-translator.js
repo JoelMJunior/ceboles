@@ -1,9 +1,11 @@
 const btn_traduzir = document.querySelector("#btn-send-text");
 const textoEnviado = document.querySelector("#text-original");
 const textoTraduzido = document.querySelector("#text-translated");
+const linguagens = document.getElementsByClassName('language');
 let novoTexto; let novaPalavra;
 let novoTextoWhatsApp; let novaPalavraWhats;
 let novoTextoHtml; let novaPalavraHtml;
+let indLinguagem = 0;
 
 
 btn_traduzir.addEventListener('click', () => {
@@ -22,7 +24,7 @@ function separaPalavras(palavras) {
         novoTextoWhatsApp.push(novaPalavraWhats);
         novoTextoHtml.push(novaPalavraHtml);
     }
-    textoTraduzido.value = novoTexto.join(" ");
+    qualLinguagem();
 }
 
 function trocaLetras(palavra) {
@@ -96,4 +98,31 @@ function trocaLetras(palavra) {
             }
         }
     } 
+}
+
+function qualLinguagem() {
+    if(indLinguagem === 0) {
+        textoTraduzido.value = novoTexto.join(" ");
+    } else if(indLinguagem === 1) {
+        textoTraduzido.value = novoTextoWhatsApp.join(" ");
+    } else if(indLinguagem === 2) {
+        textoTraduzido.value = novoTextoHtml.join(" ");
+    }
+}
+
+for(let i = 0; i < linguagens.length; i++) {
+    linguagens[i].addEventListener('click', () => {
+        buttonLanguage(i);
+    });
+}
+
+function buttonLanguage(value) {
+    for(let y = 0; y < linguagens.length; y++) {
+        linguagens[y].parentNode.classList.remove('active');
+    }
+    linguagens[value].parentNode.classList.add('active');
+    indLinguagem = value;
+    if(textoEnviado.value !== "") {
+        qualLinguagem();
+    }
 }

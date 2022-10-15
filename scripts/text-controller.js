@@ -2,7 +2,6 @@ const btnDeleteText = document.querySelector('#btn-delete-text');
 const btnCopyText = document.querySelector('#btn-copy-text');
 const sendedText = document.querySelector('#text-original');
 const translatedText = document.querySelector('#text-translated');
-const languages = document.getElementsByClassName('language');
 const btnTranslate = document.querySelector("#btn-send-text");
 let indexBtnLang;
 
@@ -42,19 +41,6 @@ function hasScroll() {
     } else {
         btnCopyText.style.right = '6px';
     }
-}
-
-for(let i = 0; i < languages.length; i++) {
-    languages[i].addEventListener('click', () => {
-        buttonLanguage(i);
-    });
-}
-
-function buttonLanguage(value) {
-    for(let y = 0; y < languages.length; y++) {
-        languages[y].parentNode.classList.remove('active');
-    }
-    languages[value].parentNode.classList.add('active');
 }
 
 function verifyText() {
