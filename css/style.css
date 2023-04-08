@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 
+:root {
+    --black-color: #2E2E2E;
+    --brown-color: #b3381d;
+    --green-light-color: #50ba91;
+    --beige-color: #FDEBE0;
+    --white-color: #FCFCFC;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +18,7 @@
 html {
     font-size: 16px;
     font-family: Happy Monkey, Helvetica, sans-serif;
-    color: #2E2E2E;
+    color: var(--black-color);
 }
 
 a {
@@ -18,18 +26,18 @@ a {
 }
 
 a:hover {
-    color: #50ba91;
+    color: var(--green-light-color);
 }
 
 .active {
-    color: #b3381d;
-    border-bottom: 1.5px solid #b3381d;
+    color: var(--brown-color);
+    border-bottom: 1.5px solid var(--brown-color);
 }
 
 /* PRESENTATION SECTION */
 #presentation {
     height: 100vh;
-    background-color: #FDEBE0;
+    background-color: var(--beige-color);
 }
 
 #presentation header nav {
@@ -74,7 +82,7 @@ a:hover {
     width: 90vw;
     height: 25%;
     margin: 0 auto;
-    background-color: #FCFCFC;
+    background-color: var(--white-color);
     border-bottom: 1px solid #2e2e2e47;
     border-radius: 7.5px 7.5px 0 0;
 }
@@ -157,7 +165,7 @@ a:hover {
     color: black;
     padding: 15px 24px 15px 18px;
     border: 0;
-    background-color: #FCFCFC;
+    background-color: var(--white-color);;
     resize: none;
 }
 
@@ -231,8 +239,8 @@ a:hover {
 #presentation #btn-translate button {
     width: 130px;
     height: 30px;
-    color: #FCFCFC;
-    background-color: #50ba91;
+    color: var(--white-color);;
+    background-color: var(--green-light-color);
     border: 0;
     border-radius: 5px;
     font-family: Happy Monkey, Helvetica, sans-serif;

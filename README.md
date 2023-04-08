@@ -1,5 +1,5 @@
 # ceboles
-Tradutor para o Cebolês, a língua do personagem Cebolinha. Os conhecedores do personagem sabem que ele troca a letra 'r' pela letra 'l'. O que alguns não sabem é que existe uma exceção para essa regra: ele não troca as letras se o 'r' for a última letra da palavra. 
+Tradutor para o Cebolês, a língua do personagem Cebolinha da Turma da Mônica. O personagem troca a letra 'r' pela letra 'l'. O que alguns não sabem é que existe uma exceção para essa regra: ele não troca as letras se o 'r' for a última letra da palavra. 
 
 Próximos passos:
 > Corrigir as pontuações que ficam negritas com as palavras.
