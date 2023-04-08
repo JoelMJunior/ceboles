@@ -63,9 +63,20 @@ function trocaLetras(palavra) {
                 (novaPalavra.indexOf(letra) === (novaPalavra.indexOf("'") - 1)))) {
                     /* NÃO TROCA A LETRA */
                 } else if(letra === 'R') {
+                    let auxIndex;
+                    for (let i = novaPalavra.length - 1; i >= 0; i--) {
+                        const valorUnicode = novaPalavra.charCodeAt(i);
+                        if (isNaN(valorUnicode) || (valorUnicode < 48) || (valorUnicode > 57 && valorUnicode < 65) || (valorUnicode > 90 && valorUnicode < 97) || (valorUnicode > 122)) {
+                            auxIndex = i;
+                        } else {
+                            break; // se não for um símbolo, sai do loop
+                        }
+                    }
                     novaPalavra = novaPalavra.replace('R', 'L');
-                    novaPalavraWhats = `*_${novaPalavra}_*`;
-                    novaPalavraHtml = `<b><i>${novaPalavra}</i></b>`;
+                    let half2 = novaPalavra.slice(auxIndex);
+                    let half1 = novaPalavra.slice(0, auxIndex);
+                    novaPalavraWhats = `*_${half1}_*${half2}`;
+                    novaPalavraHtml = `<b><i>${half1}</i></b>*${half2}`;
                 } else if(letra === 'r' && (
                 (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(',') - 1)) || 
                 (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('.') - 1)) ||
@@ -79,9 +90,20 @@ function trocaLetras(palavra) {
                 (novaPalavra.indexOf(letra) === (novaPalavra.indexOf("'") - 1)))) {
                     /* NÃO TROCA A LETRA */
                 } else if(letra === 'r') {
+                    let auxIndex;
+                    for (let i = novaPalavra.length - 1; i >= 0; i--) {
+                        const valorUnicode = novaPalavra.charCodeAt(i);
+                        if (isNaN(valorUnicode) || (valorUnicode < 48) || (valorUnicode > 57 && valorUnicode < 65) || (valorUnicode > 90 && valorUnicode < 97) || (valorUnicode > 122)) {
+                            auxIndex = i;
+                        } else {
+                            break; // se não for um símbolo, sai do loop
+                        }
+                    }
                     novaPalavra = novaPalavra.replace('r', 'l');
-                    novaPalavraWhats = `*_${novaPalavra}_*`;
-                    novaPalavraHtml = `<b><i>${novaPalavra}</i></b>`;
+                    let half2 = novaPalavra.slice(auxIndex);
+                    let half1 = novaPalavra.slice(0, auxIndex);
+                    novaPalavraWhats = `*_${half1}_*${half2}`;
+                    novaPalavraHtml = `<b><i>${half1}</i></b>*${half2}`;
                 }
             }
         } else {
