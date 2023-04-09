@@ -1,6 +1,12 @@
 #examples {
     height: 100vh;
     background-color: var(--beige-color);
+    padding-top: 30px;
+}
+
+#examples .div-examples {
+    width: 90vw;
+    margin: 0 auto;
 }
 
 #examples .title-section {
@@ -13,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px 0 0 30px;
+    margin-left: 30px;
 }
 
 #examples .container {
@@ -22,7 +28,8 @@
 
 #examples .div-examp {
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 90vw;
 }
 
 #examples .box-examp {
@@ -36,7 +43,7 @@
     background-color: var(--white-color);
     border-radius: 15px;
     width: 300px;
-    height: 400px;
+    height: 300px;
     font-size: 0.9em;
     overflow-y: hidden;
     display: flex;
