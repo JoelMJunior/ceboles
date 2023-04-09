@@ -4,7 +4,7 @@
     padding-top: 30px;
 }
 
-#examples .div-examples {
+#examples .div-content {
     width: 90vw;
     margin: 0 auto;
 }
@@ -19,7 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 30px;
 }
 
 #examples .container {
@@ -28,31 +27,43 @@
 
 #examples .div-examp {
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 90vw;
+    margin: 50px auto 0 auto;
+    height: fit-content;
 }
 
 #examples .box-examp {
     flex-direction: column;
-    width: 300px;
-    height: 600px;
+    width: 350px;
+    height: fit-content;
     align-items: center;
+    overflow-y: hidden;
 }
 
 #examples .text-examp {
     background-color: var(--white-color);
     border-radius: 15px;
-    width: 300px;
-    height: 300px;
-    font-size: 0.9em;
+    width: 350px;
+    height: 373px;
     overflow-y: hidden;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding: 25px 25px;
+}
+
+#examples .div-examp .box-examp:nth-child(1) .text-examp {
+    font-size: 1em;
+}
+#examples .div-examp .box-examp:nth-child(2) .text-examp {
+    font-size: 1em;
+}
+#examples .div-examp .box-examp:nth-child(3) .text-examp {
+    font-size: 0.9em;
 }
 
 #examples .box-examp button {
-    width: 130px;
+    width: 150px;
     height: 30px;
     color: var(--white-color);;
     background-color: var(--green-light-color);
