@@ -2,7 +2,7 @@
 Tradutor para o Cebolês, a língua do personagem Cebolinha da Turma da Mônica. O personagem troca a letra 'r' pela letra 'l'. O que alguns não sabem é que existe uma exceção para essa regra: ele não troca as letras se o 'r' for a última letra da palavra. 
 
 Próximos passos:
-> CONTINUAR EXAMPLES.CSS
+> Corrigir: Na formatação HTML e WPP o código não considera palavras terminadas em letras com acento.
 > Utilizar o conceito de break para fazer os FORs pararem de rodar desnecessariamente.
 > Fazer animação do traço abaixo dos botões clicados se mover fluidamente.
 > Centralizar as variáveis em apenas um arquivo javascript, de preferência no text-controller.js, usando export e import.

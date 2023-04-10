@@ -3,7 +3,8 @@
 :root {
     --black-color: #2E2E2E;
     --brown-color: #b3381d;
-    --green-light-color: #50ba91;
+    --green-light-color: #31D394;
+    --green-dark-color: #50ba91;
     --beige-color: #FDEBE0;
     --white-color: #FCFCFC;
 }
@@ -19,6 +20,7 @@ html {
     font-size: 16px;
     font-family: Happy Monkey, Helvetica, sans-serif;
     color: var(--black-color);
+    scroll-behavior: smooth;
 }
 
 a {
@@ -26,7 +28,7 @@ a {
 }
 
 a:hover {
-    color: var(--green-light-color);
+    color: var(--green-dark-color);
 }
 
 .active {
@@ -240,12 +242,15 @@ a:hover {
     width: 130px;
     height: 30px;
     color: var(--white-color);;
-    background-color: var(--green-light-color);
+    background-color: var(--green-dark-color);
     border: 0;
     border-radius: 5px;
     font-family: Happy Monkey, Helvetica, sans-serif;
     font-size: 1em;
     cursor: pointer;
+}
+#presentation #btn-translate button:hover {
+    background-color: var(--green-light-color);
 }
 
 /* (presentation image cebolinha) */

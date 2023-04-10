@@ -4,12 +4,12 @@
     padding-top: 30px;
 }
 
-#examples .div-content {
+.div-content {
     width: 90vw;
     margin: 0 auto;
 }
 
-#examples .title-section {
+.title-section {
     font-weight: bold;
     background-color: var(--brown-color);
     color: var(--white-color);
@@ -21,11 +21,11 @@
     justify-content: center;
 }
 
-#examples .container {
+.container {
     display: flex;
 }
 
-#examples .div-examp {
+.div-examp {
     align-items: center;
     justify-content: space-between;
     width: 90vw;
@@ -33,7 +33,7 @@
     height: fit-content;
 }
 
-#examples .box-examp {
+.box-examp {
     flex-direction: column;
     width: 350px;
     height: fit-content;
@@ -41,32 +41,67 @@
     overflow-y: hidden;
 }
 
-#examples .text-examp {
+.text-examp {
     background-color: var(--white-color);
     border-radius: 15px;
     width: 350px;
     height: 373px;
-    overflow-y: hidden;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
     padding: 25px 25px;
+    position: relative;
 }
 
-#examples .div-examp .box-examp:nth-child(1) .text-examp {
+.text-examp::-webkit-scrollbar {
+    width: 5px;
+}
+.text-examp::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+    margin: 10px 0;
+}
+.text-examp::-webkit-scrollbar-thumb {
+    background: var(--brown-color);
+    border-radius: 10px;
+}
+
+.btn-copy-examp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 6px;
+    background-color: #00000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn-copy-examp:hover {
+    background-color: #0000001d;
+}
+
+.btn-copy-examp img {
+    width: 12.5px;
+    opacity: 0.7;
+}
+
+.div-examp .box-examp:nth-child(1) .text-examp {
     font-size: 1em;
 }
-#examples .div-examp .box-examp:nth-child(2) .text-examp {
+.div-examp .box-examp:nth-child(2) .text-examp {
     font-size: 1em;
 }
-#examples .div-examp .box-examp:nth-child(3) .text-examp {
+.div-examp .box-examp:nth-child(3) .text-examp {
     font-size: 0.9em;
 }
 
-#examples .box-examp button {
+.box-examp button {
     width: 150px;
     height: 30px;
     color: var(--white-color);;
-    background-color: var(--green-light-color);
+    background-color: var(--green-dark-color);
     border: 0;
     border-radius: 5px;
     font-family: Happy Monkey, Helvetica, sans-serif;
@@ -74,3 +109,7 @@
     cursor: pointer;
     margin-top: 20px;
 }
+.box-examp button:hover {
+    background-color: var(--green-light-color);
+}
+
