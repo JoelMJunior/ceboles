@@ -103,7 +103,7 @@ function trocaLetras(palavra) {
                     let half2 = novaPalavra.slice(auxIndex);
                     let half1 = novaPalavra.slice(0, auxIndex);
                     novaPalavraWhats = `*_${half1}_*${half2}`;
-                    novaPalavraHtml = `<b><i>${half1}</i></b>*${half2}`;
+                    novaPalavraHtml = `<b><i>${half1}</i></b>${half2}`;
                 }
             }
         } else {
