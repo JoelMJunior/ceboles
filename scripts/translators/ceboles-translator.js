@@ -3,30 +3,31 @@ const textoEnviado = document.querySelector("#text-original");
 const textoTraduzido = document.querySelector("#text-translated");
 const linguagens = document.getElementsByClassName('language');
 const symbolsString = ',.;?!)}]"\'';
-let novoTexto; let novaPalavra;
-let novoTextoWhatsApp; let novaPalavraWhats;
-let novoTextoHtml; let novaPalavraHtml;
+let novoTexto;
+let novoTextoWhatsApp;
+let novoTextoHtml;
 let indLinguagem = 0;
 
 
 btn_traduzir.addEventListener('click', () => {
-    novoTexto = [];
-    novoTextoWhatsApp = [];
-    novoTextoHtml = [];
-    separaPalavras(textoEnviado.value);
+    const texts = separaPalavras(textoEnviado.value);
+    novoTexto = texts.newText;
+    novoTextoWhatsApp = texts.newTextWhatsApp;
+    novoTextoHtml = texts.newTextHTML;
     qualLinguagem();
 });
 
 function separaPalavras(palavras) {
     const palavrasSeparadas = palavras.split(" ");
+    let newText = [], newTextWhatsApp = [], newTextHTML = [];
     
     for(let el of palavrasSeparadas) {
         const words = trocaLetras(el);
-        novoTexto.push(words.newWord);
-        novoTextoWhatsApp.push(words.newWordWhats);
-        novoTextoHtml.push(words.newWordHTML);
+        newText.push(words.newWord);
+        newTextWhatsApp.push(words.newWordWhats);
+        newTextHTML.push(words.newWordHTML);
     }
-    return { novoTextoHtml };
+    return { newText, newTextWhatsApp, newTextHTML};
 }
 
 function trocaLetras(palavra) {
@@ -126,7 +127,9 @@ function buttonLanguage(value) {
         linguagens[y].parentNode.classList.remove('active');
     }
     linguagens[value].parentNode.classList.add('active');
+    
     indLinguagem = value;
+
     if(textoEnviado.value !== "") {
         qualLinguagem();
     }

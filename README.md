@@ -7,6 +7,7 @@ Próximos passos:
 > Fazer o botão do copy nos Exemplos descer junto com a barra de rolagem.
 > Fazer formato dos scrolls sumir nas bordas arredondadas.
 > Conferir a possibilidade de o texto em HTML ou WhatsApp ter scroll e no Padrão não ter o scroll.
+> Criar a última section com o Cebolinha se apresentando. Criar um texto que brinque com a troca das letras e crie palavras ambíguas.
 > Utilizar o conceito de break para fazer os FORs pararem de rodar desnecessariamente.
 > Fazer animação do traço abaixo dos botões clicados se mover fluidamente.
 > Centralizar as variáveis em apenas um arquivo javascript, de preferência no text-controller.js, usando export e import.
