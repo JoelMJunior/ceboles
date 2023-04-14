@@ -19,88 +19,90 @@ btn_traduzir.addEventListener('click', () => {
 function separaPalavras(palavras) {
     const palavrasSeparadas = palavras.split(" ");
     
-    for(el of palavrasSeparadas) {
-        trocaLetras(el);
-        novoTexto.push(novaPalavra);
-        novoTextoWhatsApp.push(novaPalavraWhats);
-        novoTextoHtml.push(novaPalavraHtml);
+    for(let el of palavrasSeparadas) {
+        const words = trocaLetras(el);
+        novoTexto.push(words.newWord);
+        novoTextoWhatsApp.push(words.newWordWhats);
+        novoTextoHtml.push(words.newWordHTML);
     }
     qualLinguagem();
+    return { novoTextoHtml };
 }
 
 function trocaLetras(palavra) {
-    novaPalavra = palavra;
-    novaPalavraWhats = palavra;
-    novaPalavraHtml = palavra;
+    let newWord = palavra;
+    let newWordWhats = palavra;
+    let newWordHTML = palavra;
 
-    if(novaPalavra.includes('RR') || novaPalavra.includes('rr')) {
-        novaPalavra = novaPalavra.replace('RR', 'L').replaceAll('rr', 'l');
-        novaPalavraWhats = `*_${novaPalavra}_*`;
-        novaPalavraHtml = `<b><i>${novaPalavra}</i></b>`;
+    if(newWord.includes('RR') || newWord.includes('rr')) {
+        newWord = newWord.replace('RR', 'L').replaceAll('rr', 'l');
+        newWordWhats = `*_${newWord}_*`;
+        newWordHTML = `<b><i>${newWord}</i></b>`;
     }
 
-    if(novaPalavra.includes('R') || novaPalavra.includes('r')) {
-        if(novaPalavra.includes(',') || 
-        novaPalavra.includes('.') || 
-        novaPalavra.includes(';') || 
-        novaPalavra.includes('?') || 
-        novaPalavra.includes('!') ||
-        novaPalavra.includes(')') ||
-        novaPalavra.includes('}') ||
-        novaPalavra.includes(']') ||
-        novaPalavra.includes('"') ||
-        novaPalavra.includes("'")) {
-            for(letra of novaPalavra) {
-                if(letra === 'R' && symbolsString.includes(novaPalavra[novaPalavra.indexOf(letra) + 1])) {
+    if(newWord.includes('R') || newWord.includes('r')) {
+        if(newWord.includes(',') || 
+        newWord.includes('.') || 
+        newWord.includes(';') || 
+        newWord.includes('?') || 
+        newWord.includes('!') ||
+        newWord.includes(')') ||
+        newWord.includes('}') ||
+        newWord.includes(']') ||
+        newWord.includes('"') ||
+        newWord.includes("'")) {
+            for(let letter of newWord) {
+                if(letter === 'R' && symbolsString.includes(newWord[newWord.indexOf(letter) + 1])) {
                     /* NÃO TROCA A LETRA */
-                } else if(letra === 'R') {
+                } else if(letter === 'R') {
                     let auxIndex;
-                    for (let i = novaPalavra.length - 1; i >= 0; i--) {
-                        const lastChar = novaPalavra.charAt(i);
+                    for (let i = newWord.length - 1; i >= 0; i--) {
+                        const lastChar = newWord.charAt(i);
                         if (symbolsString.includes(lastChar)) {
                             auxIndex = i;
                         } else {
                             break; // se não for um símbolo, sai do loop
                         }
                     }
-                    novaPalavra = novaPalavra.replace('R', 'L');
-                    let half2 = novaPalavra.slice(auxIndex);
-                    let half1 = novaPalavra.slice(0, auxIndex);
-                    novaPalavraWhats = `*_${half1}_*${half2}`;
-                    novaPalavraHtml = `<b><i>${half1}</i></b>*${half2}`;
-                } else if(letra === 'r' && symbolsString.includes(novaPalavra[novaPalavra.indexOf(letra) + 1])) {
+                    newWord = newWord.replace('R', 'L');
+                    let half2 = newWord.slice(auxIndex);
+                    let half1 = newWord.slice(0, auxIndex);
+                    newWordWhats = `*_${half1}_*${half2}`;
+                    newWordHTML = `<b><i>${half1}</i></b>*${half2}`;
+                } else if(letter === 'r' && symbolsString.includes(newWord[newWord.indexOf(letter) + 1])) {
                     /* NÃO TROCA A LETRA */
-                } else if(letra === 'r') {
+                } else if(letter === 'r') {
                     let auxIndex;
-                    for (let i = novaPalavra.length - 1; i >= 0; i--) {
-                        const lastChar = novaPalavra.charAt(i);
+                    for (let i = newWord.length - 1; i >= 0; i--) {
+                        const lastChar = newWord.charAt(i);
                         if (symbolsString.includes(lastChar)) {
                             auxIndex = i;
                         } else {
                             break; // se não for um símbolo, sai do loop
                         }
                     }
-                    novaPalavra = novaPalavra.replace('r', 'l');
-                    let half2 = novaPalavra.slice(auxIndex);
-                    let half1 = novaPalavra.slice(0, auxIndex);
-                    novaPalavraWhats = `*_${half1}_*${half2}`;
-                    novaPalavraHtml = `<b><i>${half1}</i></b>${half2}`;
+                    newWord = newWord.replace('r', 'l');
+                    let half2 = newWord.slice(auxIndex);
+                    let half1 = newWord.slice(0, auxIndex);
+                    newWordWhats = `*_${half1}_*${half2}`;
+                    newWordHTML = `<b><i>${half1}</i></b>${half2}`;
                 }
             }
         } else {
-            for(letra of novaPalavra) {
-                if(letra === 'R' && novaPalavra.indexOf(letra) !== (novaPalavra.length - 1)) {
-                    novaPalavra = novaPalavra.replace('R', 'L');
-                    novaPalavraWhats = `*_${novaPalavra}_*`;
-                    novaPalavraHtml = `<b><i>${novaPalavra}</i></b>`;
-                } else if(letra === 'r' && novaPalavra.indexOf(letra) !== (novaPalavra.length - 1)) {
-                    novaPalavra = novaPalavra.replace('r', 'l');
-                    novaPalavraWhats = `*_${novaPalavra}_*`;
-                    novaPalavraHtml = `<b><i>${novaPalavra}</i></b>`;
+            for(let letter of newWord) {
+                if(letter === 'R' && newWord.indexOf(letter) !== (newWord.length - 1)) {
+                    newWord = newWord.replace('R', 'L');
+                    newWordWhats = `*_${newWord}_*`;
+                    newWordHTML = `<b><i>${newWord}</i></b>`;
+                } else if(letter === 'r' && newWord.indexOf(letter) !== (newWord.length - 1)) {
+                    newWord = newWord.replace('r', 'l');
+                    newWordWhats = `*_${newWord}_*`;
+                    newWordHTML = `<b><i>${newWord}</i></b>`;
                 }
             }
         }
-    } 
+    }
+    return { newWord, newWordWhats, newWordHTML }; 
 }
 
 function qualLinguagem() {
