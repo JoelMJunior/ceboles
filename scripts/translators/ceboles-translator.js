@@ -2,6 +2,7 @@ const btn_traduzir = document.querySelector("#btn-send-text");
 const textoEnviado = document.querySelector("#text-original");
 const textoTraduzido = document.querySelector("#text-translated");
 const linguagens = document.getElementsByClassName('language');
+const symbolsString = ',.;?!)}]"\'';
 let novoTexto; let novaPalavra;
 let novoTextoWhatsApp; let novaPalavraWhats;
 let novoTextoHtml; let novaPalavraHtml;
@@ -50,23 +51,13 @@ function trocaLetras(palavra) {
         novaPalavra.includes('"') ||
         novaPalavra.includes("'")) {
             for(letra of novaPalavra) {
-                if(letra === 'R' && (
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(',') - 1)) || 
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('.') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(';') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('?') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('!') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(')') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('}') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(']') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('"') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf("'") - 1)))) {
+                if(letra === 'R' && symbolsString.includes(novaPalavra[novaPalavra.indexOf(letra) + 1])) {
                     /* NÃO TROCA A LETRA */
                 } else if(letra === 'R') {
                     let auxIndex;
                     for (let i = novaPalavra.length - 1; i >= 0; i--) {
-                        const valorUnicode = novaPalavra.charCodeAt(i);
-                        if (isNaN(valorUnicode) || (valorUnicode < 48) || (valorUnicode > 57 && valorUnicode < 65) || (valorUnicode > 90 && valorUnicode < 97) || (valorUnicode > 122)) {
+                        const lastChar = novaPalavra.charAt(i);
+                        if (symbolsString.includes(lastChar)) {
                             auxIndex = i;
                         } else {
                             break; // se não for um símbolo, sai do loop
@@ -77,23 +68,13 @@ function trocaLetras(palavra) {
                     let half1 = novaPalavra.slice(0, auxIndex);
                     novaPalavraWhats = `*_${half1}_*${half2}`;
                     novaPalavraHtml = `<b><i>${half1}</i></b>*${half2}`;
-                } else if(letra === 'r' && (
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(',') - 1)) || 
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('.') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(';') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('?') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('!') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(')') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('}') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf(']') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf('"') - 1)) ||
-                (novaPalavra.indexOf(letra) === (novaPalavra.indexOf("'") - 1)))) {
+                } else if(letra === 'r' && symbolsString.includes(novaPalavra[novaPalavra.indexOf(letra) + 1])) {
                     /* NÃO TROCA A LETRA */
                 } else if(letra === 'r') {
                     let auxIndex;
                     for (let i = novaPalavra.length - 1; i >= 0; i--) {
-                        const valorUnicode = novaPalavra.charCodeAt(i);
-                        if (isNaN(valorUnicode) || (valorUnicode < 48) || (valorUnicode > 57 && valorUnicode < 65) || (valorUnicode > 90 && valorUnicode < 97) || (valorUnicode > 122)) {
+                        const lastChar = novaPalavra.charAt(i);
+                        if (symbolsString.includes(lastChar)) {
                             auxIndex = i;
                         } else {
                             break; // se não for um símbolo, sai do loop
