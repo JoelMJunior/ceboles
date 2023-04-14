@@ -14,6 +14,7 @@ btn_traduzir.addEventListener('click', () => {
     novoTextoWhatsApp = [];
     novoTextoHtml = [];
     separaPalavras(textoEnviado.value);
+    qualLinguagem();
 });
 
 function separaPalavras(palavras) {
@@ -25,7 +26,6 @@ function separaPalavras(palavras) {
         novoTextoWhatsApp.push(words.newWordWhats);
         novoTextoHtml.push(words.newWordHTML);
     }
-    qualLinguagem();
     return { novoTextoHtml };
 }
 
