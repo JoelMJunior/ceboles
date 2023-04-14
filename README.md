@@ -2,7 +2,9 @@
 Tradutor para o Cebolês, a língua do personagem Cebolinha da Turma da Mônica. O personagem troca a letra 'r' pela letra 'l'. O que alguns não sabem é que existe uma exceção para essa regra: ele não troca as letras se o 'r' for a última letra da palavra. 
 
 Próximos passos:
-> Colocar o cursor na caixa de texto quando o user clicar no X para apagar todo o texto.
+> Padronizar o formato dos scrolls nos box de texto traduzido.
+> Fazer o botão de tradução funcionar nos textos dos Exemplos.
+> Fazer o botão do copy nos Exemplos descer junto com a barra de rolagem.
 > Utilizar o conceito de break para fazer os FORs pararem de rodar desnecessariamente.
 > Fazer animação do traço abaixo dos botões clicados se mover fluidamente.
 > Centralizar as variáveis em apenas um arquivo javascript, de preferência no text-controller.js, usando export e import.

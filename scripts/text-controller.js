@@ -12,6 +12,7 @@ btnDeleteText.addEventListener('click', () => {
     translatedText.value = "";
     btnDeleteText.style.display = 'none';
     btnCopyText.style.display = 'none';
+    sendedText.focus();
 });
 
 btnCopyText.addEventListener('click', () => {
