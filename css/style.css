@@ -174,16 +174,24 @@ a:hover {
 #presentation textarea:focus {
     outline: none;
 }
-
 #presentation textarea:disabled {
     color: black;
     cursor: text;
 }
 
+#presentation textarea::-webkit-scrollbar {
+    width: 5px;
+}
+#presentation textarea::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+#presentation textarea::-webkit-scrollbar-thumb {
+    background: var(--brown-color);
+}
+
 #presentation #text-original {
     border-radius: 0 0 0 7.5px;
 }
-
 #presentation #text-translated {
     border-radius: 0 0 7.5px 0;
 }
@@ -203,7 +211,6 @@ a:hover {
     border-radius: 50%;
     cursor: pointer;
 }
-
 #presentation #btn-delete-text:hover {
     background-color: #0000001d;
 }

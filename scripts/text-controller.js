@@ -41,14 +41,14 @@ function addEvent() {
 function hasScroll() {
     const elem1 = document.getElementById('text-original');
     if(elem1.clientHeight < elem1.scrollHeight) {
-        btnDeleteText.style.right = '18px';
+        btnDeleteText.style.right = '11px';
     } else {
         btnDeleteText.style.right = '6px';
     }
     
     const elem2 = document.getElementById('text-translated');
     if(elem2.clientHeight < elem2.scrollHeight) {
-        btnCopyText.style.right = '18px';
+        btnCopyText.style.right = '11px';
     } else {
         btnCopyText.style.right = '6px';
     }
