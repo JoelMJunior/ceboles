@@ -2,7 +2,10 @@ const btnDeleteText = document.querySelector('#btn-delete-text');
 const btnCopyText = document.querySelector('#btn-copy-text');
 const sendedText = document.querySelector('#text-original');
 const translatedText = document.querySelector('#text-translated');
+const textsOriExamp = document.getElementsByClassName('only-txt-ori-exp');
+const textsTransExamp = document.getElementsByClassName('only-txt-trans-exp');
 const btnTranslate = document.querySelector('#btn-send-text');
+const btnTransExamp = document.getElementsByClassName('btn-trans-examp');
 const btnsCopyExamp = document.getElementsByClassName('btn-copy-examp');
 let indexBtnLang;
 
@@ -31,9 +34,27 @@ btnTranslate.addEventListener('click', () => {
 
 addEvent();
 function addEvent() {
+    for(let i=0; i < btnTransExamp.length; i++) {
+        btnTransExamp[i].addEventListener('click', () => {
+            if(textsOriExamp[i].style.display === 'block' || getComputedStyle(textsOriExamp[i]).display === 'block') {
+                textsOriExamp[i].style.display = 'none';
+                textsTransExamp[i].style.display = 'block';
+                btnTransExamp[i].innerText = 'Destraduzir';
+            }
+            else if(textsOriExamp[i].style.display === 'none' && getComputedStyle(textsOriExamp[i]).display === 'none') {
+                textsOriExamp[i].style.display = 'block';
+                textsTransExamp[i].style.display = 'none';
+                btnTransExamp[i].innerText = 'Traduzir';
+            }
+        });
+    }
     for(let i=0; i < btnsCopyExamp.length; i++) {
         btnsCopyExamp[i].addEventListener('click', () => {
-            navigator.clipboard.writeText(btnsCopyExamp[i].parentNode.querySelector('p').textContent);
+            if(textsOriExamp[i].style.display === 'block' || getComputedStyle(textsOriExamp[i]).display === 'block') {
+                navigator.clipboard.writeText(textsOriExamp[i].querySelector('i').innerText);
+            } else {
+                navigator.clipboard.writeText(textsTransExamp[i].querySelector('i').innerText);
+            }
         });
     }
 }

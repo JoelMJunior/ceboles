@@ -69,7 +69,7 @@ function trocaLetras(palavra) {
                     let half2 = newWord.slice(auxIndex);
                     let half1 = newWord.slice(0, auxIndex);
                     newWordWhats = `*_${half1}_*${half2}`;
-                    newWordHTML = `<b><i>${half1}</i></b>*${half2}`;
+                    newWordHTML = `<b><i>${half1}</i></b>${half2}`;
                 } else if(letter === 'r' && symbolsString.includes(newWord[newWord.indexOf(letter) + 1])) {
                     /* NÃO TROCA A LETRA */
                 } else if(letter === 'r') {

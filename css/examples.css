@@ -35,7 +35,7 @@
 
 .box-examp {
     flex-direction: column;
-    width: 350px;
+    width: 360px;
     height: fit-content;
     align-items: center;
     overflow-y: hidden;
@@ -44,7 +44,7 @@
 .text-examp {
     background-color: var(--white-color);
     border-radius: 15px;
-    width: 350px;
+    width: 360px;
     height: 373px;
     overflow-y: auto;
     display: flex;
@@ -65,6 +65,18 @@
     border-radius: 10px;
 }
 
+.div-examp .box-examp:nth-child(1) .text-examp {
+    font-size: 1em;
+}
+.div-examp .box-examp:nth-child(2) .text-examp {
+    font-size: 0.9em;
+    line-height: 1.8em;
+}
+.div-examp .box-examp:nth-child(3) .text-examp {
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
 .btn-copy-examp {
     display: flex;
     justify-content: center;
@@ -81,20 +93,16 @@
 .btn-copy-examp:hover {
     background-color: #0000001d;
 }
-
 .btn-copy-examp img {
     width: 12.5px;
     opacity: 0.7;
 }
 
-.div-examp .box-examp:nth-child(1) .text-examp {
-    font-size: 1em;
+.only-txt-ori-exp {
+    display: block;
 }
-.div-examp .box-examp:nth-child(2) .text-examp {
-    font-size: 1em;
-}
-.div-examp .box-examp:nth-child(3) .text-examp {
-    font-size: 0.9em;
+.only-txt-trans-exp {
+    display: none;
 }
 
 .box-examp button {
