@@ -36,9 +36,34 @@ function trocaLetras(palavra) {
     let newWordHTML = palavra;
 
     if(newWord.includes('RR') || newWord.includes('rr')) {
-        newWord = newWord.replace('RR', 'L').replaceAll('rr', 'l');
-        newWordWhats = `*_${newWord}_*`;
-        newWordHTML = `<b><i>${newWord}</i></b>`;
+        let hasSymbol = false;
+
+        for(let simb of symbolsString) {
+            if(newWord.includes(simb)) {
+                hasSymbol = true;
+                break;
+            }
+        }
+        if(hasSymbol === true) {
+            newWord = newWord.replace('RR', 'L').replaceAll('rr', 'l');
+            let auxIndex = newWord.length;
+            for (let i = newWord.length - 1; i >= 0; i--) {
+                const lastChar = newWord.charAt(i);
+                if (symbolsString.includes(lastChar)) {
+                    auxIndex = i;
+                } else {
+                    break; // se não for um símbolo, sai do loop
+                }
+            }
+            let half2 = newWord.slice(auxIndex);
+            let half1 = newWord.slice(0, auxIndex);
+            newWordWhats = `*_${half1}_*${half2}`;
+            newWordHTML = `<b><i>${half1}</i></b>${half2}`;
+        } else {
+            newWord = newWord.replace('RR', 'L').replaceAll('rr', 'l');
+            newWordWhats = `*_${newWord}_*`;
+            newWordHTML = `<b><i>${newWord}</i></b>`;
+        }
     }
 
     if(newWord.includes('R') || newWord.includes('r')) {

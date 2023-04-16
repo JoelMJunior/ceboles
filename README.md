@@ -2,13 +2,13 @@
 Tradutor para o Cebolês, a língua do personagem Cebolinha da Turma da Mônica. O personagem troca a letra 'r' pela letra 'l'. O que alguns não sabem é que existe uma exceção para essa regra: ele não troca as letras se o 'r' for a última letra da palavra. 
 
 Próximos passos:
-> Corrigir a formatação na pontuação nas palavras com dois rr ou RR. 
-> Melhorar as functions para que trabalhem com returns e funcionem mais amplamente.
-> Fazer o tradutor considerar a quebra de linha na hora de dividir as palavras.
+> Fazer o tradutor considerar a quebra de linha na hora de dividir as palavras. Pesquisar em:
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
+> Tentar simplificar a verificacão de pontução como foi feita em RR ou rr. 
 > Fazer o botão do copy nos Exemplos descer junto com a barra de rolagem.
 > Fazer formato dos scrolls sumir nas bordas arredondadas.
-> Conferir a possibilidade de o texto em HTML ou WhatsApp ter scroll e no Padrão não ter o scroll.
-> Criar a última section com o Cebolinha se apresentando. Criar um texto que brinque com a troca das letras e crie palavras ambíguas.
+> Conferir a possibilidade de o texto em HTML ou WhatsApp ter scroll e no 'Padrão' não ter o scroll.
+> Criar a última section com o Cebolinha se apresentando. Criar um texto que brinque com a troca das letras e crie palavras ambíguas (ex.: escarrar). 
 > Utilizar o conceito de break para fazer os FORs pararem de rodar desnecessariamente.
 > Fazer animação do traço abaixo dos botões clicados se mover fluidamente.
 > Centralizar as variáveis em apenas um arquivo javascript, de preferência no text-controller.js, usando export e import.
