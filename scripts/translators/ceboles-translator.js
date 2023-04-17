@@ -67,16 +67,15 @@ function trocaLetras(palavra) {
     }
 
     if(newWord.includes('R') || newWord.includes('r')) {
-        if(newWord.includes(',') || 
-        newWord.includes('.') || 
-        newWord.includes(';') || 
-        newWord.includes('?') || 
-        newWord.includes('!') ||
-        newWord.includes(')') ||
-        newWord.includes('}') ||
-        newWord.includes(']') ||
-        newWord.includes('"') ||
-        newWord.includes("'")) {
+        let hasSymbol = false;
+
+        for(let simb of symbolsString) {
+            if(newWord.includes(simb)) {
+                hasSymbol = true;
+                break;
+            }
+        }
+        if(hasSymbol === true) {
             for(let letter of newWord) {
                 if(letter === 'R' && symbolsString.includes(newWord[newWord.indexOf(letter) + 1])) {
                     /* NÃO TROCA A LETRA */
