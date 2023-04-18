@@ -14,15 +14,20 @@ btn_traduzir.addEventListener('click', () => {
     novoTexto = texts.newText;
     novoTextoWhatsApp = texts.newTextWhatsApp;
     novoTextoHtml = texts.newTextHTML;
+    console.log(novoTextoWhatsApp);
     qualLinguagem();
 });
 
 function separaPalavras(palavras) {
-    const palavrasSeparadas = palavras.split(" ");
+    let palavrasSeparadas = palavras.replaceAll('\n', '^^^~~~').split('^^^').join(' ').split(' ');
+    console.log(palavrasSeparadas);
     let newText = [], newTextWhatsApp = [], newTextHTML = [];
     
     for(let el of palavrasSeparadas) {
+        console.log(el);
         const words = trocaLetras(el);
+        console.log(words.newWordWhats);
+
         newText.push(words.newWord);
         newTextWhatsApp.push(words.newWordWhats);
         newTextHTML.push(words.newWordHTML);
@@ -31,19 +36,26 @@ function separaPalavras(palavras) {
 }
 
 function trocaLetras(palavra) {
+    let newline = '\n';
+    let hasNewLine = false;
+    if(palavra.includes('~~~')) {
+        hasNewLine = true;
+        palavra = palavra.replace('~~~', '');
+    }
+
     let newWord = palavra;
     let newWordWhats = palavra;
     let newWordHTML = palavra;
-
+    
     if(newWord.includes('RR') || newWord.includes('rr')) {
         let hasSymbol = false;
-
         for(let simb of symbolsString) {
             if(newWord.includes(simb)) {
                 hasSymbol = true;
                 break;
             }
         }
+
         if(hasSymbol === true) {
             newWord = newWord.replace('RR', 'L').replaceAll('rr', 'l');
             let auxIndex = newWord.length;
@@ -68,7 +80,6 @@ function trocaLetras(palavra) {
 
     if(newWord.includes('R') || newWord.includes('r')) {
         let hasSymbol = false;
-
         for(let simb of symbolsString) {
             if(newWord.includes(simb)) {
                 hasSymbol = true;
@@ -127,6 +138,13 @@ function trocaLetras(palavra) {
             }
         }
     }
+
+    if(hasNewLine === true) {
+        newWord = `${newline}${newWord}`;
+        newWordWhats = `${newline}${newWordWhats}`;
+        newWordHTML = `${newline}${newWordHTML}`;
+    }
+
     return { newWord, newWordWhats, newWordHTML }; 
 }
 
