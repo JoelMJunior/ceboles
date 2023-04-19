@@ -1,3 +1,6 @@
+import { translateText, whichLanguage } from "./translators/ceboles-translator.js";
+
+const languages = document.getElementsByClassName('language');
 const btnDeleteText = document.querySelector('#btn-delete-text');
 const btnCopyText = document.querySelector('#btn-copy-text');
 const sendedText = document.querySelector('#text-original');
@@ -7,7 +10,7 @@ const textsTransExamp = document.getElementsByClassName('only-txt-trans-exp');
 const btnTranslate = document.querySelector('#btn-send-text');
 const btnTransExamp = document.getElementsByClassName('btn-trans-examp');
 const btnsCopyExamp = document.getElementsByClassName('btn-copy-examp');
-let indexBtnLang;
+let indLanguage = 0;
 
 
 btnDeleteText.addEventListener('click', () => {
@@ -28,12 +31,19 @@ sendedText.addEventListener('input', () => {
 });
 
 btnTranslate.addEventListener('click', () => {
+    translateText(sendedText.value);
     verifyText();
     hasScroll();
 }); 
 
 addEvent();
 function addEvent() {
+    for(let i = 0; i < languages.length; i++) {
+        languages[i].addEventListener('click', () => {
+            buttonLanguage(i);
+            hasScroll();
+        });
+    }
     for(let i=0; i < btnTransExamp.length; i++) {
         btnTransExamp[i].addEventListener('click', () => {
             if(textsOriExamp[i].style.display === 'block' || getComputedStyle(textsOriExamp[i]).display === 'block') {
@@ -57,6 +67,17 @@ function addEvent() {
             }
         });
     }
+}
+
+function buttonLanguage(value) {
+    for(let y = 0; y < languages.length; y++) {
+        languages[y].parentNode.classList.remove('active');
+    }
+    languages[value].parentNode.classList.add('active');
+    
+    indLanguage = value;
+
+    whichLanguage();
 }
 
 function hasScroll() {
@@ -87,3 +108,5 @@ function verifyText() {
         btnCopyText.style.display = 'flex';
     }
 }
+
+export { indLanguage };

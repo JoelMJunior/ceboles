@@ -1,32 +1,27 @@
-const btn_traduzir = document.querySelector("#btn-send-text");
+import { indLanguage } from "../text-controller.js";
+
 const textoEnviado = document.querySelector("#text-original");
 const textoTraduzido = document.querySelector("#text-translated");
-const linguagens = document.getElementsByClassName('language');
 const symbolsString = ',.;?!)}]"\'';
 let novoTexto;
 let novoTextoWhatsApp;
 let novoTextoHtml;
-let indLinguagem = 0;
 
 
-btn_traduzir.addEventListener('click', () => {
-    const texts = separaPalavras(textoEnviado.value);
+function translateText(text) {
+    const texts = separaPalavras(text);
     novoTexto = texts.newText;
     novoTextoWhatsApp = texts.newTextWhatsApp;
     novoTextoHtml = texts.newTextHTML;
-    console.log(novoTextoWhatsApp);
-    qualLinguagem();
-});
+    whichLanguage();
+}
 
 function separaPalavras(palavras) {
     let palavrasSeparadas = palavras.replaceAll('\n', '^^^~~~').split('^^^').join(' ').split(' ');
-    console.log(palavrasSeparadas);
     let newText = [], newTextWhatsApp = [], newTextHTML = [];
     
     for(let el of palavrasSeparadas) {
-        console.log(el);
         const words = trocaLetras(el);
-        console.log(words.newWordWhats);
 
         newText.push(words.newWord);
         newTextWhatsApp.push(words.newWordWhats);
@@ -148,31 +143,16 @@ function trocaLetras(palavra) {
     return { newWord, newWordWhats, newWordHTML }; 
 }
 
-function qualLinguagem() {
-    if(indLinguagem === 0) {
-        textoTraduzido.value = novoTexto.join(" ");
-    } else if(indLinguagem === 1) {
-        textoTraduzido.value = novoTextoWhatsApp.join(" ");
-    } else if(indLinguagem === 2) {
-        textoTraduzido.value = novoTextoHtml.join(" ");
+function whichLanguage() {
+    if(textoEnviado.value != "") {
+        if(indLanguage === 0) {
+            textoTraduzido.value = novoTexto.join(" ");
+        } else if(indLanguage === 1) {
+            textoTraduzido.value = novoTextoWhatsApp.join(" ");
+        } else if(indLanguage === 2) {
+            textoTraduzido.value = novoTextoHtml.join(" ");
+        }
     }
 }
 
-for(let i = 0; i < linguagens.length; i++) {
-    linguagens[i].addEventListener('click', () => {
-        buttonLanguage(i);
-    });
-}
-
-function buttonLanguage(value) {
-    for(let y = 0; y < linguagens.length; y++) {
-        linguagens[y].parentNode.classList.remove('active');
-    }
-    linguagens[value].parentNode.classList.add('active');
-    
-    indLinguagem = value;
-
-    if(textoEnviado.value !== "") {
-        qualLinguagem();
-    }
-}
+export { translateText, whichLanguage };
