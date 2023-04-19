@@ -2,7 +2,6 @@
 Tradutor para o Cebolês, a língua do personagem Cebolinha da Turma da Mônica. O personagem troca a letra 'r' pela letra 'l'. O que alguns não sabem é que existe uma exceção para essa regra: ele não troca as letras se o 'r' for a última letra da palavra. 
 
 Próximos passos:
-> Conferir a possibilidade de o texto em HTML ou WhatsApp ter scroll e no 'Padrão' não ter o scroll.
 > Criar a última section com o Cebolinha se apresentando. Criar um texto que brinque com a troca das letras e crie palavras ambíguas (ex.: escarrar). 
 > Adicionar o restante do conteúdo.
 > Adicionar uma forma de fazer a leitura por voz do texto, integrando com outros sites.
