@@ -1,0 +1,63 @@
+#ceboles {
+    height: 100vh;
+    background-color: var(--beige-color);
+    padding-top: 30px;
+}
+
+.ceboles-container {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.main-text {
+    margin: 35px auto 0 auto;
+}
+.main-text h2 {
+    font-size: 2em;
+}
+
+.ceboles-content {
+    display: flex;
+    margin-top: 60px;
+}
+
+.ceboles-explication {
+    width: 35%;
+}
+
+.ceb-exp-title {
+    margin-bottom: 30px;
+}
+
+.ceb-exp-text li {
+    margin-top: 20px;
+    font-size: .95em;
+    list-style-position: inside;
+    list-style-image: url(../images/button-tshirt.png);
+}
+
+.img-sansao {
+    width: fit-content;
+    margin: 20px auto 0 auto;
+}
+.img-sansao img {
+    width: 190px;
+}
+
+.ceboles-challenge {
+    width: 40%;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green-light-color);
+    align-items: center;
+    color: var(--white-color);
+    border: 4px solid var(--green-dark-color);
+    border-radius: 30px;
+}
+
+.challenge-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
