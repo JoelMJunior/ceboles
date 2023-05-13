@@ -46,4 +46,17 @@
     font-weight: bolder;
     padding: 5px 15px;
     font-size: 0.9em;
+    animation: change-color 2s ease-in-out infinite;
+}
+
+@keyframes change-color {
+    0% {
+        color: var(--green-light-color);
+    }
+    50% {
+        color: var(--green-dark-color);
+    }
+    100% {
+        color: var(--green-light-color);
+    }
 }
