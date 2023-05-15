@@ -3,14 +3,9 @@ Tradutor para o Cebolês, a língua do personagem Cebolinha da Turma da Mônica.
 
 Próximos passos:
 > Fazer responsividade.
-> Fazer formato dos scrolls sumir nas bordas arredondadas.
 > Transformar os arrays em challenge-controller.js em um único objeto.
-> Tentar reduzir o css usando mais as classes.
-> Utilizar o conceito de break para fazer os FORs pararem de rodar desnecessariamente.
 > Adicionar uma forma de fazer a leitura por voz do texto, integrando com outros sites.
 > Fazer animação do traço abaixo dos botões clicados se mover fluidamente.
-> Centralizar as variáveis em apenas um arquivo javascript, de preferência no text-controller.js, usando export e import.
-> Considerar colocar o div do olhos no formato oval, para melhorar o posionamento dos olhos pretos.
 > No eyes-moviment.js, pensar numa forma mais elegante de resolver o onmousemove quando não tiver mais o movimento dos olhos.
 > Mandar para a Yasmin Yassine.
 
