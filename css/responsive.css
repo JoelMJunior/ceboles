@@ -133,3 +133,112 @@
         margin: 10px auto 0 auto;
     }
 }
+
+@media only screen and (max-width: 600px) { 
+    
+    /* PRESENTATION SECTION */
+    #presentation {
+        height: fit-content;
+    }
+    #presentation h1 {
+        font-size: 1.35em;
+    }
+    #presentation #container-text {
+        height: 45%;
+    }
+    #presentation #nav-options {
+        height: 45px;
+    }
+    #presentation #box-texts {
+        flex-direction: column;
+        height: fit-content;
+    }
+    #presentation #box-texts>div {
+        height: 90px;
+    }
+    #presentation #box-texts>div:first-child {
+        border-right: 0px solid #2e2e2e47;
+        border-bottom: 1px solid #2e2e2e47;
+    }
+    #presentation textarea {
+        width: 100%;
+        height: 100%;
+        font-size: 0.95em;
+    }
+    #presentation #text-original {
+        border-radius: 0 0 0 0;
+    }
+    #presentation #text-translated {
+        border-radius: 0 0 7.5px 7.5px;
+    }
+    #presentation #image-cebolinha {
+        margin: -30px auto 0 auto;
+    }
+    
+    /* EXAMPLES SECTION */
+    #examples {
+        height: fit-content;
+    }
+    .div-examp {
+        flex-direction: column;
+    }
+    .box-examp {
+        width: 350px;
+        margin-bottom: 50px;
+    }
+    .text-examp {
+        width: 350px;
+        height: 420px;
+        padding: 35px 25px;
+    }
+    .btn-copy-examp {
+        top: -22.5px;
+    }
+    .box-examp button {
+        width: 200px;
+        height: 30px;
+    }
+
+    /* CEBOLES SECTION */
+    #ceboles {
+        height: fit-content;
+    }
+    .main-text {
+        text-align: center;
+    }
+    .ceboles-content {
+        flex-direction: column;
+        margin-top: 30px;
+        align-items: center;
+    }
+    .ceboles-explication {
+        width: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .img-sansao {
+        order: 1;
+    }
+    .ceb-exp-title {
+        order: 2;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .ceb-exp-text {
+        order: 3;
+    }
+    .ceboles-challenge {
+        width: 400px;
+        margin: 30px auto 30px auto;
+    }
+
+    /* CEBOLINHA SECTION */
+    #cebolinha {
+        height: fit-content;
+        padding: 30px;
+    }
+    .tip {
+        box-shadow: var(--green-dark-color);
+    }
+}
