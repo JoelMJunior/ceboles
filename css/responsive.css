@@ -23,6 +23,9 @@
     .div-examp .box-examp:nth-child(3) .text-examp {
         font-size: 0.86em;
     }
+    .box-examp:nth-child(3) .btn-copy-div {
+        height: 180%;
+    }
 
     /* CEBOLES SECTION */
     .main-text {
@@ -109,6 +112,12 @@
     }
     .div-examp .box-examp:nth-child(3) .text-examp {
         font-size: 0.85em;
+    }
+    .box-examp:nth-child(1) .btn-copy-div {
+        height: 180%;
+    }
+    .box-examp:nth-child(3) .btn-copy-div {
+        height: 190%;
     }
     .box-examp button {
         width: 120px;
