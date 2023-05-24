@@ -22,7 +22,7 @@ imgCebolinha.addEventListener('click', () => {
 });
 
 function posicionaTexto(ntext) {
-    if(screen.width > 1025) {
+    if(screen.width > 1024) {
         if(ntext === 0) {
             textBalloon.style.top = '48px';
             textBalloon.style.marginLeft = '48px';
@@ -36,7 +36,7 @@ function posicionaTexto(ntext) {
             textBalloon.style.top = '62px';
             textBalloon.style.marginLeft = '50px';
         }
-    } else if(screen.width <= 1025) {
+    } else if(screen.width <= 1024 && screen.width > 600) {
         if(ntext === 0) {
             textBalloon.style.top = '34px';
             textBalloon.style.marginLeft = '39px';
@@ -56,5 +56,26 @@ function posicionaTexto(ntext) {
             textBalloon.style.fontSize = '0.9em';
             imgBalloon.style.width = '240px';
         }
+    } else if(screen.width <= 600) {
+        if(ntext === 0) {
+            textBalloon.style.top = '31px';
+            textBalloon.style.marginLeft = '31px';
+            textBalloon.style.marginRight = '19px';
+        } else if(ntext === 1) {
+            textBalloon.style.top = '37px';
+            textBalloon.style.marginLeft = '44px';
+        } else if(ntext === 2) {
+            imgCebolinha.style.height = '135px';
+            imgBalloon.style.width = '170px';
+            textBalloon.style.top = '41px';
+            textBalloon.style.marginLeft = '8px';
+            textBalloon.style.marginRight = '26px';
+        } else if(ntext === 3) {
+            imgCebolinha.style.height = '160px';
+            imgBalloon.style.width = '220px';
+            textBalloon.style.top = '43px';
+            textBalloon.style.marginLeft = '54px';
+            textBalloon.style.marginRight = '36px';
+        }  
     }
 }

@@ -202,16 +202,22 @@
         flex-direction: column;
     }
     .box-examp {
-        width: 350px;
+        width: 320px;
         margin-bottom: 50px;
     }
     .text-examp {
-        width: 350px;
+        width: 320px;
         height: 420px;
         padding: 35px 25px;
     }
     .btn-copy-examp {
         top: -22.5px;
+    }
+    .box-examp:nth-child(1) .btn-copy-div {
+        height: 118.5%;
+    }
+    .box-examp:nth-child(3) .btn-copy-div {
+        height: 155%;
     }
     .box-examp button {
         width: 200px;
@@ -248,8 +254,11 @@
         order: 3;
     }
     .ceboles-challenge {
-        width: 400px;
+        width: 320px;
         margin: 30px auto 30px auto;
+    }
+    .challenge-text {
+        font-size: 1em;
     }
 
     /* CEBOLINHA SECTION */
@@ -257,7 +266,19 @@
         height: fit-content;
         padding: 30px;
     }
-    .tip {
-        box-shadow: var(--green-dark-color);
+    .img-cebolinha img {
+        height: 160px;
+    }
+    .balloon {
+        margin-left: 0px;
+    }
+    .balloon img {
+        width: 200px;
+    }
+    .text-balloon {
+        font-size: 0.875em;
+        top: 31px;
+        margin-left: 31px;
+        margin-right: 19px;
     }
 }
