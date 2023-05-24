@@ -147,23 +147,27 @@
     
     /* PRESENTATION SECTION */
     #presentation {
-        height: fit-content;
+        height: 100vh;
     }
     #presentation h1 {
         font-size: 1.35em;
     }
+    #presentation #h1-text {
+        margin-top: 80px;
+    }
     #presentation #container-text {
         height: 45%;
+        margin-top: 80px;
     }
     #presentation #nav-options {
         height: 45px;
     }
     #presentation #box-texts {
         flex-direction: column;
-        height: fit-content;
+        height: 100%;
     }
     #presentation #box-texts>div {
-        height: 90px;
+        height: 100%;
     }
     #presentation #box-texts>div:first-child {
         border-right: 0px solid #2e2e2e47;
@@ -180,8 +184,14 @@
     #presentation #text-translated {
         border-radius: 0 0 7.5px 7.5px;
     }
+    #presentation #btn-translate button {
+        width: 185px;
+        height: 35px;
+    }
     #presentation #image-cebolinha {
-        margin: -30px auto 0 auto;
+        flex-direction: row;
+        justify-content: center;
+        margin: 40px auto 0 auto;
     }
     
     /* EXAMPLES SECTION */
