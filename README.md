@@ -4,7 +4,7 @@ Tradutor para o Cebolês, a língua do personagem Cebolinha da Turma da Mônica.
 Próximos passos:
 > Fazer responsividade.
 > Transformar os arrays em challenge-controller.js em um único objeto.
-> Adicionar uma forma de fazer a leitura por voz do texto, integrando com outros sites.
+> Adicionar uma forma de fazer a leitura por voz como no Google Translate.
 > Fazer animação do traço abaixo dos botões clicados se mover fluidamente.
 > No eyes-moviment.js, pensar numa forma mais elegante de resolver o onmousemove quando não tiver mais o movimento dos olhos.
 > Mandar para a Yasmin Yassine.
