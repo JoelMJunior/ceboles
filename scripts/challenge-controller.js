@@ -12,8 +12,8 @@ const answerArray = ['rolo', 'macarrão', 'lindo', 'rindo', 'bula', 'burra', 'ca
 
 for(let obj of objArray) {
     obj.addEventListener('keyup', (e) => {
-        const key = e.key;
-        if(key == "Enter") {
+        const key = e.keyCode;
+        if(key == 13) {
             verifyChallengeAnswer(obj.value, objArray.indexOf(obj), obj);
         }
     });
