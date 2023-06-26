@@ -292,3 +292,13 @@
         margin-right: 19px;
     }
 }
+
+@media only screen and (max-width: 380px) {
+    #presentation #container-text {
+        height: 35%;
+        margin-top: 60px;
+    }
+    #presentation #image-cebolinha {
+        margin: 25px auto 0 auto;
+    }
+}
