@@ -1,6 +1,8 @@
 import { translateText, whichLanguage } from "./translators/ceboles-translator.js";
 
 const languages = document.getElementsByClassName('language');
+const btnMobNav = document.querySelector('.lang-mob-nav');
+const languagesMob = document.getElementsByClassName('language-mob');
 const btnDeleteText = document.querySelector('#btn-delete-text');
 const btnCopyText = document.querySelector('#btn-copy-text');
 const sendedText = document.querySelector('#text-original');
@@ -12,6 +14,9 @@ const btnTransExamp = document.getElementsByClassName('btn-trans-examp');
 const btnsCopyExamp = document.getElementsByClassName('btn-copy-examp');
 let indLanguage = 0;
 
+btnMobNav.addEventListener('click', () => {
+    document.querySelector('#lang-btn-mob').style.display = 'block';
+});
 
 btnDeleteText.addEventListener('click', () => {
     sendedText.value = "";
@@ -42,6 +47,13 @@ function addEvent() {
         languages[i].addEventListener('click', () => {
             buttonLanguage(i);
             hasScroll();
+        });
+        languagesMob[i].addEventListener('click', () => {
+            buttonLanguage(i);
+            hasScroll();
+            document.querySelector('#lang-btn-mob').style.display = 'none';
+            const textButton = languagesMob[i].innerText;
+            btnMobNav.innerText = textButton;
         });
     }
     for(let i=0; i < btnTransExamp.length; i++) {

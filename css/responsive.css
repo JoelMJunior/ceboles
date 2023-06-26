@@ -162,6 +162,16 @@
     #presentation #nav-options {
         height: 45px;
     }
+    #presentation .languages {
+        justify-content: center;
+    }
+    #presentation .languages.translated {
+        display: none;
+    }
+    #presentation .lang-mobile {
+        display: flex;
+        justify-content: center;
+    }
     #presentation #box-texts {
         flex-direction: column;
         height: 100%;

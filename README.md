@@ -3,6 +3,7 @@ Tradutor para o Cebolês, a língua do personagem Cebolinha da Turma da Mônica.
 
 Próximos passos:
 > Fazer responsividade.
+> Pesquisar sobre novas unidades de medida, como svh, lvh e dvh. https://www.linkedin.com/posts/madsbrodt_the-new-css-viewport-units-are-awesome-activity-7068514999698087936-9kFA?utm_source=share&utm_medium=member_desktop
 > Transformar os arrays em challenge-controller.js em um único objeto.
 > Adicionar uma forma de fazer a leitura por voz como no Google Translate.
 > Fazer animação do traço abaixo dos botões clicados se mover fluidamente.
