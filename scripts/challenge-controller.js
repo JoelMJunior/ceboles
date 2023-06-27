@@ -11,17 +11,15 @@ const objArray = [loloInpt, macalaoaInpt, lindo1Inpt, lindo2Inpt, bula1Inpt, bul
 const answerArray = ['rolo', 'macarrão', 'lindo', 'rindo', 'bula', 'burra', 'calo', 'carro', 'caro'];
 
 for(let obj of objArray) {
-    obj.addEventListener('keyup', (e) => {
-        const key = e.keyCode;
-        if(key == 13) {
-            verifyChallengeAnswer(obj.value, objArray.indexOf(obj), obj);
-        }
+    obj.addEventListener('change', () => {
+        verifyChallengeAnswer(obj.value, objArray.indexOf(obj), obj);
     });
 };
 
 function verifyChallengeAnswer (guess, answer, obj) {
     answer = answerArray[answer];
-
+    guess = guess.toLowerCase();
+    
     if (guess === answer) {
         obj.style.backgroundColor = '#31D394';
     } else {
