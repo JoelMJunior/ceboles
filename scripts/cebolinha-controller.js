@@ -58,24 +58,26 @@ function posicionaTexto(ntext) {
         }
     } else if(screen.width <= 600) {
         if(ntext === 0) {
+            imgBalloon.style.marginLeft = '0px';
             textBalloon.style.top = '31px';
             textBalloon.style.marginLeft = '31px';
             textBalloon.style.marginRight = '19px';
         } else if(ntext === 1) {
+            imgBalloon.style.marginLeft = '47px';
             textBalloon.style.top = '37px';
-            textBalloon.style.marginLeft = '44px';
+            textBalloon.style.marginLeft = '89px';
         } else if(ntext === 2) {
-            imgCebolinha.style.height = '135px';
             imgBalloon.style.width = '170px';
+            imgBalloon.style.marginLeft = '65px';
             textBalloon.style.top = '41px';
-            textBalloon.style.marginLeft = '8px';
-            textBalloon.style.marginRight = '26px';
+            textBalloon.style.marginLeft = '73px';
+            textBalloon.style.marginRight = '29px';
         } else if(ntext === 3) {
-            imgCebolinha.style.height = '160px';
-            imgBalloon.style.width = '220px';
-            textBalloon.style.top = '43px';
-            textBalloon.style.marginLeft = '54px';
-            textBalloon.style.marginRight = '36px';
+            imgBalloon.style.width = '200px';
+            imgBalloon.style.marginLeft = '34px';
+            textBalloon.style.top = '37px';
+            textBalloon.style.marginLeft = '79px';
+            textBalloon.style.marginRight = '25px';
         }  
     }
 }

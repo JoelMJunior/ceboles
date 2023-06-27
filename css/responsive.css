@@ -273,14 +273,21 @@
 
     /* CEBOLINHA SECTION */
     #cebolinha {
-        height: fit-content;
+        height: 100dvh;
         padding: 30px;
+    }
+    .cebolinha-img-balloon {
+        flex-direction: column-reverse;
+    }
+    .img-cebolinha {
+        margin-top: 0;
     }
     .img-cebolinha img {
         height: 160px;
     }
     .balloon {
         margin-left: 0px;
+        height: 173px;
     }
     .balloon img {
         width: 200px;
