@@ -80,6 +80,9 @@
 @media only screen and (max-width: 768px) {
     
     /* PRESENTATION SECTION */
+    #presentation {
+        height: 100dvh;
+    }
     #presentation h1 {
         font-size: 1.6em;
     }
@@ -273,7 +276,7 @@
 
     /* CEBOLINHA SECTION */
     #cebolinha {
-        height: 100dvh;
+        height: fit-content;
         padding: 30px;
     }
     .cebolinha-img-balloon {
