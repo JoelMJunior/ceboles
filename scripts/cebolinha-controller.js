@@ -13,7 +13,7 @@ imgCebolinha.addEventListener('click', () => {
     textBalloon.innerHTML = allTexts[nextText];
     imgCebolinha.src = `./images/cebolinha-apresentacao${nextText+1}.png`;
     posicionaTexto(nextText);
-    imgBalloon.src = `../images/balao-normal${nextText+1}.png`;
+    imgBalloon.src = `./images/balao-normal${nextText+1}.png`;
     console.log(imgCebolinha.scr);
     nextText += 1;
     if(nextText === allTexts.length) {
