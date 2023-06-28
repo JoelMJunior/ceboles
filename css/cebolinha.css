@@ -44,7 +44,7 @@
     color: var(--green-light-color);
     font-weight: bolder;
     padding: 5px 15px;
-    font-size: 0.9em;
+    font-size: 1em;
     animation: change-color 2s ease-in-out infinite;
 }
 

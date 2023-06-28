@@ -278,7 +278,6 @@
     /* CEBOLINHA SECTION */
     #cebolinha {
         height: fit-content;
-        padding: 30px;
     }
     .cebolinha-img-balloon {
         flex-direction: column-reverse;
@@ -301,6 +300,11 @@
         top: 31px;
         margin-left: 31px;
         margin-right: 19px;
+    }
+    .tip {
+        width: 275px;
+        margin-bottom: 30px;
+        text-align: center;
     }
 }
 
