@@ -21,6 +21,8 @@
 }
 .img-cebolinha img {
     height: 245px;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
 }
 
 .balloon {
@@ -29,6 +31,8 @@
 }
 .balloon img {
     width: 270px;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
 }
 
 .text-balloon {
@@ -37,6 +41,8 @@
     top: 48px;
     margin-left: 48px;
     margin-right: 30px;
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
 }
 
 .tip {

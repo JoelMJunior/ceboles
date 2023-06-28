@@ -10,15 +10,24 @@ const allTexts = [text1, text2, text3, text4];
 let nextText = 1;
 
 imgCebolinha.addEventListener('click', () => {
-    textBalloon.innerHTML = allTexts[nextText];
-    imgCebolinha.src = `./images/cebolinha-apresentacao${nextText+1}.png`;
-    posicionaTexto(nextText);
-    imgBalloon.src = `./images/balao-normal${nextText+1}.png`;
-    console.log(imgCebolinha.scr);
-    nextText += 1;
-    if(nextText === allTexts.length) {
-        nextText = 0;
-    }
+    imgCebolinha.style.opacity = '0';
+    imgBalloon.style.opacity = '0';
+    textBalloon.style.opacity = '0';
+    
+    setTimeout(() => {
+        textBalloon.innerHTML = allTexts[nextText];
+        imgCebolinha.src = `./images/cebolinha-apresentacao${nextText+1}.png`;
+        posicionaTexto(nextText);
+        imgBalloon.src = `./images/balao-normal${nextText+1}.png`;
+        console.log(imgCebolinha.scr);
+        nextText += 1;
+        if(nextText === allTexts.length) {
+            nextText = 0;
+        }
+        imgCebolinha.style.opacity = '1';
+        imgBalloon.style.opacity = '1';
+        textBalloon.style.opacity = '1';
+    }, 255);
 });
 
 function posicionaTexto(ntext) {
