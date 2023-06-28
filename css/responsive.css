@@ -95,11 +95,6 @@
     }
 
     /* EXAMPLES SECTION */
-    .title-section {
-        width: 130px;
-        height: 45px;
-        font-size: 0.90em;
-    }
     .box-examp {
         width: 220px;
     }
@@ -208,6 +203,12 @@
     }
     
     /* EXAMPLES SECTION */
+    .title-section {
+        width: 275px;
+        height: 65px;
+        font-size: 1.25em;
+        margin: auto;
+    }
     #examples {
         height: fit-content;
     }
